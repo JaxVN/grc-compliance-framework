@@ -14,7 +14,7 @@ authors:
     affiliation: "KIEN A GROUP (independent researcher)"
     country: VN
 version: "1.0.0"
-date-released: "2025-01-01"
+date-released: "2026-05-20"
 license: CC-BY-4.0
 repository-code: "https://github.com/JaxVN/grc-compliance-framework"
 url: "https://jaxvn.github.io"
@@ -31,5 +31,5 @@ keywords:
   - control mapping
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.PLACEHOLDER"
+    value: "10.5281/zenodo.20311847"
     description: "Zenodo DOI for this version"

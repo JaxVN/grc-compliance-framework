@@ -1,6 +1,6 @@
 # GRC Compliance Framework Mapping
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PLACEHOLDER.svg)](https://doi.org/10.5281/zenodo.PLACEHOLDER)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20311847.svg)](https://doi.org/10.5281/zenodo.20311847)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--9340--8520-green)](https://orcid.org/0009-0000-9340-8520)
 
@@ -40,7 +40,7 @@ grc-compliance-framework/
 
 Each GitHub release maps to a Zenodo snapshot with a unique DOI. Use the DOI badge above to cite a specific version. For the latest version, cite as:
 
-> Hong Bao Ngan. (2025). *GRC Compliance Framework Mapping* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.PLACEHOLDER
+> Hong Bao Ngan. (2026). *GRC Compliance Framework Mapping* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.20311847
 
 ## Standards covered
 
