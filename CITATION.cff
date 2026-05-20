@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it using the metadata below."
+type: software
+title: "GRC Compliance Framework Mapping"
+abstract: >
+  A structured mapping framework linking international GRC standards
+  (ISO 27001, NIST CSF, ACSC Essential Eight) to technical controls
+  in enterprise IT environments including Microsoft 365, Wazuh, and Action1.
+authors:
+  - family-names: "Ngan"
+    given-names: "Hong Bao"
+    orcid: "https://orcid.org/0009-0000-9340-8520"
+    alias: "JaxVN"
+    affiliation: "KIEN A GROUP (independent researcher)"
+    country: VN
+version: "1.0.0"
+date-released: "2025-01-01"
+license: CC-BY-4.0
+repository-code: "https://github.com/JaxVN/grc-compliance-framework"
+url: "https://jaxvn.github.io"
+keywords:
+  - GRC
+  - compliance
+  - ISO 27001
+  - NIST CSF
+  - cybersecurity governance
+  - Microsoft 365
+  - Wazuh
+  - enterprise IT
+  - Vietnam
+  - control mapping
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.PLACEHOLDER"
+    description: "Zenodo DOI for this version"

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "MAP-001",
+    "standard_control_id": "ISO27001-5.17",
+    "technical_control_id": "M365-SS-MFA-001",
+    "mapping_type": "full",
+    "rationale": "MFA directly implements the requirement to manage authentication information through a controlled process. Microsoft 365 MFA enforces multi-factor authentication for all users via Conditional Access.",
+    "confidence": "high",
+    "version": "1.0.0",
+    "doi": null,
+    "zenodo_record_id": null,
+    "orcid_maintainer": "https://orcid.org/0009-0000-9340-8520",
+    "owner_type": "personal",
+    "owner_id": "0009-0000-9340-8520"
+  },
+  {
+    "id": "MAP-002",
+    "standard_control_id": "ISO27001-8.5",
+    "technical_control_id": "M365-SS-MFA-001",
+    "mapping_type": "full",
+    "rationale": "Secure authentication requirement maps directly to MFA enforcement in M365.",
+    "confidence": "high",
+    "version": "1.0.0",
+    "doi": null,
+    "zenodo_record_id": null,
+    "orcid_maintainer": "https://orcid.org/0009-0000-9340-8520",
+    "owner_type": "personal",
+    "owner_id": "0009-0000-9340-8520"
+  },
+  {
+    "id": "MAP-003",
+    "standard_control_id": "ISO27001-5.15",
+    "technical_control_id": "M365-SS-RBAC-001",
+    "mapping_type": "partial",
+    "rationale": "M365 role-based access control addresses logical access control. Physical access and on-premises assets require additional controls outside M365 scope.",
+    "confidence": "medium",
+    "version": "1.0.0",
+    "doi": null,
+    "zenodo_record_id": null,
+    "orcid_maintainer": "https://orcid.org/0009-0000-9340-8520",
+    "owner_type": "personal",
+    "owner_id": "0009-0000-9340-8520"
+  },
+  {
+    "id": "MAP-004",
+    "standard_control_id": "ISO27001-8.8",
+    "technical_control_id": "WAZUH-SCA-001",
+    "mapping_type": "partial",
+    "rationale": "Wazuh Security Configuration Assessment (SCA) scans endpoints for known vulnerabilities and misconfigurations, partially satisfying the vulnerability management requirement.",
+    "confidence": "medium",
+    "version": "1.0.0",
+    "doi": null,
+    "zenodo_record_id": null,
+    "orcid_maintainer": "https://orcid.org/0009-0000-9340-8520",
+    "owner_type": "personal",
+    "owner_id": "0009-0000-9340-8520"
+  }
+]

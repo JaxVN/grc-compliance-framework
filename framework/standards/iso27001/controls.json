@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ISO27001-5.1",
+    "standard": "ISO27001-2022",
+    "clause_id": "5.1",
+    "label": "Policies for information security",
+    "source_link": "https://www.iso.org/standard/27001",
+    "summary": "Organization shall define, approve, and communicate an information security policy.",
+    "source_license": "ISO standard — referenced for mapping purposes only. Full text requires ISO subscription."
+  },
+  {
+    "id": "ISO27001-5.15",
+    "standard": "ISO27001-2022",
+    "clause_id": "5.15",
+    "label": "Access control",
+    "source_link": "https://www.iso.org/standard/27001",
+    "summary": "Rules to control physical and logical access to information and assets shall be established and implemented.",
+    "source_license": "ISO standard — referenced for mapping purposes only."
+  },
+  {
+    "id": "ISO27001-5.16",
+    "standard": "ISO27001-2022",
+    "clause_id": "5.16",
+    "label": "Identity management",
+    "source_link": "https://www.iso.org/standard/27001",
+    "summary": "Full life cycle of identities shall be managed — provisioning, review, and revocation.",
+    "source_license": "ISO standard — referenced for mapping purposes only."
+  },
+  {
+    "id": "ISO27001-5.17",
+    "standard": "ISO27001-2022",
+    "clause_id": "5.17",
+    "label": "Authentication information",
+    "source_link": "https://www.iso.org/standard/27001",
+    "summary": "Allocation and management of authentication information shall be controlled by a formal process.",
+    "source_license": "ISO standard — referenced for mapping purposes only."
+  },
+  {
+    "id": "ISO27001-8.5",
+    "standard": "ISO27001-2022",
+    "clause_id": "8.5",
+    "label": "Secure authentication",
+    "source_link": "https://www.iso.org/standard/27001",
+    "summary": "Secure authentication technologies and procedures shall be implemented based on information access restrictions.",
+    "source_license": "ISO standard — referenced for mapping purposes only."
+  },
+  {
+    "id": "ISO27001-8.8",
+    "standard": "ISO27001-2022",
+    "clause_id": "8.8",
+    "label": "Management of technical vulnerabilities",
+    "source_link": "https://www.iso.org/standard/27001",
+    "summary": "Information about technical vulnerabilities of systems shall be obtained and appropriate measures taken.",
+    "source_license": "ISO standard — referenced for mapping purposes only."
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GRC Compliance Framework Schema",
+  "description": "Core data model for mapping GRC standards to technical controls",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hong Bao Ngan (JaxVN)",
+    "orcid": "https://orcid.org/0009-0000-9340-8520"
+  },
+  "definitions": {
+    "StandardControl": {
+      "description": "A clause or control from a published GRC standard",
+      "properties": {
+        "id": { "type": "string", "example": "ISO27001-A.8.1" },
+        "standard": {
+          "type": "string",
+          "enum": ["ISO27001-2022", "NIST-CSF-2.0", "ACSC-E8", "CIS-Controls-v8"]
+        },
+        "clause_id": { "type": "string", "example": "A.8.1" },
+        "label": { "type": "string", "example": "User endpoint devices" },
+        "source_link": { "type": "string", "format": "uri" },
+        "summary": {
+          "type": "string",
+          "description": "Author-written summary only. Do not reproduce original standard text."
+        },
+        "source_license": { "type": "string", "example": "Government/Public reference" }
+      },
+      "required": ["id", "standard", "clause_id", "label"]
+    },
+    "TechnicalControl": {
+      "description": "A concrete setting, rule, or policy in an IT tool",
+      "properties": {
+        "id": { "type": "string", "example": "M365-SS-MFA-001" },
+        "tool": {
+          "type": "string",
+          "enum": ["Microsoft365-SecureScore", "Wazuh", "Action1", "EntraID", "Purview", "Manual"]
+        },
+        "control_ref": { "type": "string", "example": "Require MFA for all users" },
+        "description": { "type": "string" },
+        "implementation_notes": { "type": "string" },
+        "evidence_type": {
+          "type": "string",
+          "enum": ["screenshot", "config_export", "csv_export", "api_response", "log", "manual"]
+        }
+      },
+      "required": ["id", "tool", "control_ref"]
+    },
+    "Mapping": {
+      "description": "M:N relationship between a StandardControl and TechnicalControl",
+      "properties": {
+        "id": { "type": "string" },
+        "standard_control_id": { "type": "string" },
+        "technical_control_id": { "type": "string" },
+        "mapping_type": {
+          "type": "string",
+          "enum": ["full", "partial", "compensating"]
+        },
+        "rationale": { "type": "string" },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "version": { "type": "string", "example": "1.0.0" },
+        "doi": { "type": "string", "example": "10.5281/zenodo.XXXXXXX" },
+        "zenodo_record_id": { "type": "string" },
+        "orcid_maintainer": {
+          "type": "string",
+          "example": "https://orcid.org/0009-0000-9340-8520"
+        },
+        "owner_type": {
+          "type": "string",
+          "enum": ["personal", "org"],
+          "default": "personal"
+        },
+        "owner_id": {
+          "type": "string",
+          "description": "ORCID for personal, org slug for org",
+          "example": "0009-0000-9340-8520"
+        }
+      },
+      "required": ["id", "standard_control_id", "technical_control_id", "mapping_type"]
+    },
+    "Evidence": {
+      "description": "Audit evidence linking a TechnicalControl to a real configuration",
+      "properties": {
+        "id": { "type": "string" },
+        "technical_control_id": { "type": "string" },
+        "evidence_type": {
+          "type": "string",
+          "enum": ["screenshot", "config_snippet", "csv_export", "api_response", "log_excerpt", "link"]
+        },
+        "source": { "type": "string" },
+        "collected_at": { "type": "string", "format": "date-time" },
+        "collected_by": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "technical_control_id", "evidence_type", "source"]
+    },
+    "RawPostureData": {
+      "description": "Source-neutral ingest layer — accepts CSV export or API response",
+      "properties": {
+        "id": { "type": "string" },
+        "ingest_type": {
+          "type": "string",
+          "enum": ["csv_upload", "api_sync", "manual_entry"]
+        },
+        "source_tool": { "type": "string" },
+        "source_tenant": { "type": "string" },
+        "raw_field_key": { "type": "string" },
+        "raw_field_value": { "type": "string" },
+        "normalized_control_id": {
+          "type": "string",
+          "description": "Maps to TechnicalControl.id after normalization"
+        },
+        "ingested_at": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "ingest_type", "source_tool", "raw_field_key"]
+    }
+  }
+}
